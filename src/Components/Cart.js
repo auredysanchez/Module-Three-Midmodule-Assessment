@@ -3,8 +3,8 @@ import formatPrice from "../helpers/formatPrice";
 
 function Cart({ cart, subtotal, tax, total}) {
   return (
-    <section className="Cart">
-      <h1>Cart</h1>
+    <section>
+      <h2>Cart</h2>
       <ul>
         {cart.map((product) => {
           const { name, price, id } = product;
@@ -15,9 +15,9 @@ function Cart({ cart, subtotal, tax, total}) {
           );
         })}
       </ul>
-      <h2>Subtotal: {formatPrice(subtotal)}</h2>
-      <h2>Tax: {formatPrice(tax)}</h2>
-      <h2>Total: {formatPrice(total)} </h2>
+      <h3>Subtotal: {formatPrice(subtotal)}</h3>
+      <h3>Tax: {formatPrice(tax)}</h3>
+      <h3>Total: {formatPrice(total)} </h3>
     </section>
   );
 }

@@ -42,10 +42,10 @@ class Checkout extends Component {
     const { firstName, lastName, email, zipCode, creditCard } = this.state;
     return (
       <section>
-        <h1>Checkout</h1>
+        <h2>Checkout</h2>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="firstName">First Name</label>
-          <input
+          <input className="input"
             id="firstName"
             name="firstName"
             onChange={this.handleChange}
@@ -53,28 +53,28 @@ class Checkout extends Component {
           />
 
           <label htmlFor="email">Email</label>
-          <input
+          <input className="input"
             id="email"
             name="email"
             onChange={this.handleChange}
             value={email}
           />
           <label htmlFor="lastName">Last Name</label>
-          <input
+          <input className="input"
             id="lastName"
             name="lastName"
             onChange={this.handleChange}
             value={lastName}
           />
           <label htmlFor="zipCode">Zip Code</label>
-          <input
+          <input className="input"
             id="zipCode"
             name="zipCode"
             onChange={this.handleChange}
             value={zipCode}
           />
           <label htmlFor="creditCard">Credit Card</label>
-          <input
+          <input className="input"
             id="creditCard"
             name="creditCard"
             onChange={this.handleChange}

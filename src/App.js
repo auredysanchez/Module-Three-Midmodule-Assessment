@@ -14,15 +14,19 @@ class App extends Component {
   };
   render() {
     const { cart } = this.state;
-    const subtotal = getSubtotal(cart)
-    const tax = subtotal * .05
-    const total = subtotal + tax
+    const subtotal = getSubtotal(cart);
+    const tax = subtotal * 0.05;
+    const total = subtotal + tax;
     return (
-      <div>
-        <h1>My Garage Sale</h1>
-        <Product addProduct={this.addProduct} />
-        <Cart cart={cart} subtotal= {subtotal} tax ={tax} total={total} />
-        <Checkout total={total} />
+      <div className="app">
+        <section className="Product">
+          <h1>My Garage Sale</h1>
+          <Product addProduct={this.addProduct} />
+        </section>
+        <section className="cart">
+          <Cart cart={cart} subtotal={subtotal} tax={tax} total={total} />
+          <Checkout total={total} />
+        </section>
       </div>
     );
   }

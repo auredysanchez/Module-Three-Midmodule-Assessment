@@ -9,7 +9,7 @@ function Products({addProduct}) {
     })
 
     return(
-        <section className="Products">
+        <section>
             <ul>
                 {products}
             </ul>
