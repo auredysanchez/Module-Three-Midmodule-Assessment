@@ -1,28 +1,35 @@
 import React, { Component } from "react";
 
-// import formatPrice from "../helpers/formatPrice";
+import formatPrice from "../helpers/formatPrice";
+import onlyNumbers from "../helpers/onlyNumbers"
 
 class Checkout extends Component {
+  
   state = {
     firstName: "",
     lastName: "",
     email: "",
     zipCode: "",
-    creditCard: ""
+    creditCard: "",
+    
   };
+
 
     handleSubmit = (e) => {
         e.preventDefault()
         const { firstName, lastName, email, zipCode, creditCard } = this.state;
+        const {total} = this.props
         // debugger
         if(!firstName || !lastName || !email) {
           window.alert("Input is not valid")
-      } else if(creditCard.length !== 16) {
+      } else if(creditCard.length !== 16 || onlyNumbers(creditCard)) {
         window.alert("Credit card number is not valid");
-      } else if (zipCode.length !== 5) {
+      } else if (zipCode.length !== 5 || onlyNumbers(zipCode)) {
         window.alert("Zip code is not valid");
       } else {
-        window.alert(`Purchase complete`);
+        window.alert(
+          `Purchase complete
+            Total:${formatPrice(total)}`);
       }
   }
 
