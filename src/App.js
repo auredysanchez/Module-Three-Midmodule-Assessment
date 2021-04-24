@@ -19,7 +19,7 @@ class App extends Component {
     const total = subtotal + tax;
     return (
       <div className="app">
-        <section className="Product">
+        <section className= "Products">
           <h1>My Garage Sale</h1>
           <Product addProduct={this.addProduct} />
         </section>

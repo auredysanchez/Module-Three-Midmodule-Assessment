@@ -1,6 +1,11 @@
-.Product ul{
+.Products ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    list-style: none;
+}
+
+.Products{
+    display: grid;
 }
 
 .app {
@@ -11,5 +16,5 @@
 
 .input{
     display: flex;
-    
+
 }
